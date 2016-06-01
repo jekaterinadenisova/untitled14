@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>11</title>
+</head>
+<body>
+<center> <div>11. Write a JavaScript program to convert temperatures to and from celsius, fahrenheit
+    [ Formula : c/5 = (f-32)/9 [ where c = temperature in celsius and f = temperature in fahrenheit ]
+    Expected Output :
+    60°C is 140 °F
+    45°F is 7.222222222222222°C</div>
+    <input type="text" id="inputFarenheit" size= 9>
+    <input type="button" onclick="farenheitToCelsium()" value="To Farenheit"><br><br>
+    <input type="text" id="inputCelsium" size= 9>
+    <input type="button" onclick="celsiumToFarenheit()" value="To Celsium"><br>
+    <h1><div id="result"></div></h1></center>
+<script>
+    function farenheitToCelsium()
+    {
+        var input = Number (document.getElementById("inputFarenheit").value);
+        var result = (input*(9/5))+32;
+        document.getElementById("result").innerHTML=input+'\xB0C is '+result+'\xB0F';
+    }
+    function celsiumToFarenheit()
+    {
+        var input = Number (document.getElementById("inputCelsium").value);
+        var result = (input-32)/(9/5);
+        document.getElementById("result").innerHTML=input+'\xB0 F is '+result+'\xB0C';
+        document.getElementById("inputFarenheit").value = '';
+    }
+</script>
+</body>
+</html>
